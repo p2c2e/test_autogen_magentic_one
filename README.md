@@ -1,5 +1,6 @@
 # MagenticOne Examples
 
+Testing out the minimal settings for magentic_one / autogen example to be of use
 This repository contains several examples demonstrating different capabilities of MagenticOne/autogen:
 
 ## Example Files
@@ -32,6 +33,7 @@ This repository contains several examples demonstrating different capabilities o
 ## Setup
 
 1. Set up OpenAI configuration:
+   Copy the openai.sample.json to openai.json and edit it..
    ```bash
    export CHAT_COMPLETION_CLIENT_CONFIG=`cat ./openai.json`
    ```
@@ -49,18 +51,19 @@ This repository contains several examples demonstrating different capabilities o
 2. Install dependencies:
    ```bash
    GIT_LFS_SKIP_SMUDGE=1 uv sync
-   uv add "git+https://github.com/microsoft/autogen.git@main#subdirectory=python/packages/autogen-magentic-one"
+#   uv add "git+https://github.com/microsoft/autogen.git@main#subdirectory=python/packages/autogen-magentic-one"
    ```
+  Don't think we need the separate uv add ... It is now specified within pyprojec.toml
 
 ## Miscellaneous
 
-Testing out the minimal settings for magentic_one / autogen example to be of use
 
 GIT_LFS_SKIP_SMUDGE=1 uv sync
+# Next line was due to non-standard location of the socket file since i use colima..
 export DOCkER_HOST=unix:///Users/sudranga1/.colima/default/docker.sock
 
 python examples/example.py --logs_dir ./my_logs
 
-GIT_LFS_SKIP_SMUDGE=1 
-then uv add 
-uv add "git+https://github.com/microsoft/autogen.git@main#subdirectory=python/packages/autogen-magentic-one"\
+# GIT_LFS_SKIP_SMUDGE=1 
+# then uv add 
+# uv add "git+https://github.com/microsoft/autogen.git@main#subdirectory=python/packages/autogen-magentic-one"
