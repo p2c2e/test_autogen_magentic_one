@@ -1,0 +1,46 @@
+[project]
+name = "test-autogen-magentic-one"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Sudharsan Rangarajan", email = "sudharsan.rangarajan@gmail.com"},
+]
+requires-python = ">=3.10"
+dependencies = [
+    "pyright==1.1.389",
+    "mypy==1.13.0",
+    "ruff==0.4.8",
+    "pytest",
+    "pytest-asyncio",
+    "pytest-cov",
+    "pytest-xdist",
+    "typer",
+    "rich",
+    "polars",
+    "pytest_mock",
+    "poethepoet",
+    "packaging",
+    "grpcio-tools~=1.62.0",
+    "mypy-protobuf",
+    "cookiecutter",
+    "poethepoet",
+    "tomli",
+    "tomli-w",
+    "chainlit",
+
+    "pyautogen>=0.2.9",
+    "autogen-ext[docker]",
+    "python-dotenv>=1.0.0",
+    "playwright>=1.41.0",
+    "docker>=7.0.0",
+    "autogen-magentic-one",
+    "autogen-core>=0.4.0",
+    "asyncio_atexit",
+]
+
+[tool.uv.sources]
+autogen-magentic-one = { git = "https://github.com/microsoft/autogen.git", subdirectory = "python/packages/autogen-magentic-one", rev = "main" }
+
+#[build-system]
+#requires = ["hatchling"]
+#build-backend = "hatchling.build"
